@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABALHANDO COM DOM</title>
+    <style>
+        body{
+            background-color:brown;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .area{
+            background-color: black;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 140px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.521);
+            font-weight: bold;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiro codigo com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo com <strong>DOM</strong> em JavaScript</p>
+    <div id = "msg">Clique aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var corpo = window.document.body
+        var m = window.document.getElementById('msg')
+        window.document.write(`Está escrito assim: ${p1.innerText}`)
+        p1.style.color = 'black'
+        m.style.backgroundColor = 'black'
+        m.style.padding = '10px'
+        m.style.width = '80px'
+        m.style.textAlign = 'center'
+        m.innerText = 'Estamos aguardando...'
+        var mgs = window.document.querySelector('div#msg')
+        window.document.write(`<br>${msg.innerText}`)
+    </script>
+    <h1>Eventos com o DOM</h1>
+    <div class = "area">
+        Interaja...
+    </div>
+    <script>
+        var num = window.document.querySelector('div.area') 
+        num.addEventListener('click', clicar)
+        num.addEventListener('mouseenter', entrar)
+        num.addEventListener('mouseout', sair)
+        function clicar(){
+            num.innerHTML = 'Clicou...'
+            num.style.color = 'black'
+            num.style.backgroundColor = 'white'           
+        }
+        function entrar(){
+            num.innerHTML = 'Entrou!'
+            num.style.backgroundColor = 'orange'
+        }
+        function sair(){
+            num.innerHTML = 'Saiu!'
+            num.style.backgroundColor = 'pink'
+            num.style.color = 'black'
+        }
+        /*mouseenter -> quando o mouse entra no contenier
+
+        mousemove -> quando o mouse caminhao dentro do  contenier
+
+        mousedown -> quando pressiona/segura o mouse
+
+        mouseup -> quando solta o mouse
+
+        click -> clique com o mouse
+
+        mouseout -> quando o mouse sai do contenier
+        */
+    </script>
+</body>
+</html>

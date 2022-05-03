@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+    <h1>1° aula de java Script</h1>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?') //tratamento de variavel
+        var idade = window.prompt('Quantos anos você tem?')
+        var endereco = window.prompt('Qual é o seu endereço?')
+        var n1 = Number(window.prompt('Digite um número.')) //Converter string para numero
+        var n2 = Number.parseInt(window.prompt('Digite outro nomero.'))
+        soma = n1 + n2
+        document.write(`A soma foi ${soma}`)
+        window.alert(`O seu nome é ${nome} tem ${idade} anos e mora na ${endereco}`) //concatenação com template string
+        document.write(`<br>Nome em maiusculas ${nome.toUpperCase()}, em minusculas é ${nome.toLowerCase()} e tem ${nome.length}`) // transformar a letra em maiusculas, minisculas e quantidade de caracteres.
+    </script>
+</body>
+</html>
